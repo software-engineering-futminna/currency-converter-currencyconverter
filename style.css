@@ -1,0 +1,476 @@
+/* ===============================
+   PROFESSIONAL CURRENCY CONVERTER
+   Responsive Blue Theme
+================================ */
+:root{
+    --primary:#0d6efd;
+    --primary-dark:#0b5ed7;
+    --primary-light:#e8f1ff;
+
+    --background:#f4f7fb;
+    --surface:#ffffff;
+
+    --text:#212529;
+    --text-light:#6c757d;
+
+    --border:#dfe5ec;
+
+    --radius:12px;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    --transition:.3s ease;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--background);
+    color:var(--text);
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+/* ================= HEADER ================= */
+
+.inst-header{
+    background:linear-gradient(135deg,#0a47a3,#0d6efd);
+    color:#fff;
+    padding:25px 20px;
+    border-bottom:5px solid #66b2ff;
+}
+
+.header-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:15px;
+}
+
+.logo-placeholder{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,.2);
+}
+
+.logo-placeholder img{
+    width:80%;
+    height:80%;
+    object-fit:contain;
+}
+
+.logo-text-fallback{
+    color:var(--primary);
+    font-size:2rem;
+}
+
+.institution-details h1{
+    font-size:1.5rem;
+}
+
+.institution-details h2{
+    margin-top:5px;
+    color:#dce9ff;
+    font-weight:400;
+}
+
+.institution-details h3{
+    margin-top:8px;
+    font-size:1rem;
+}
+
+/* ================= MAIN ================= */
+
+.app-container{
+    width:100%;
+    max-width:1200px;
+    margin:30px auto;
+    padding:0 20px;
+    flex:1;
+}
+
+/* ================= CARD ================= */
+
+.converter-card,
+.panel-card{
+    background:var(--surface);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    border:1px solid var(--border);
+}
+
+.converter-card{
+    margin-bottom:25px;
+}
+
+.card-header{
+    background:linear-gradient(135deg,#0d6efd,#2563eb);
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+.card-header h2{
+    font-size:1.6rem;
+}
+
+.card-header p{
+    margin-top:8px;
+    color:#dce9ff;
+}
+
+.card-body{
+    padding:25px;
+}
+
+/* ================= FORM ================= */
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-wrapper{
+    position:relative;
+}
+
+.input-icon{
+    position:absolute;
+    top:50%;
+    left:15px;
+    transform:translateY(-50%);
+    color:#999;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px 16px 14px 45px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    outline:none;
+    font-size:1rem;
+    transition:.3s;
+    background:#fff;
+}
+
+select{
+    padding-left:15px;
+}
+
+input:focus,
+select:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(13,110,253,.15);
+}
+
+.currency-row{
+    display:flex;
+    align-items:flex-end;
+    gap:15px;
+}
+
+.flex-1{
+    flex:1;
+}
+
+/* ================= BUTTONS ================= */
+
+.primary-btn{
+    width:100%;
+    border:none;
+    background:var(--primary);
+    color:#fff;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+    transition:var(--transition);
+}
+
+.primary-btn:hover{
+    background:var(--primary-dark);
+}
+
+.icon-btn{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:none;
+    background:var(--primary-light);
+    color:var(--primary);
+    cursor:pointer;
+    transition:.4s;
+    margin-bottom:18px;
+}
+
+.icon-btn:hover{
+    background:var(--primary);
+    color:#fff;
+    transform:rotate(180deg);
+}
+
+.secondary-btn{
+    border:1px solid var(--border);
+    background:#fff;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+}
+
+.secondary-btn:hover{
+    background:#f5f5f5;
+}
+
+/* ================= RESULT ================= */
+
+.result-box{
+    margin-top:25px;
+    padding:25px;
+    background:var(--primary-light);
+    border-radius:12px;
+    text-align:center;
+}
+
+.result-header{
+    color:var(--primary);
+    font-size:.85rem;
+    text-transform:uppercase;
+    font-weight:700;
+}
+
+.result-value{
+    font-size:2.2rem;
+    margin:10px 0;
+    font-weight:700;
+    color:#0a47a3;
+    word-break:break-word;
+}
+
+.rate-value{
+    color:var(--text-light);
+}
+
+.result-actions{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+/* ================= STATUS ================= */
+
+.status-msg{
+    margin-top:20px;
+    padding:12px;
+    border-radius:8px;
+}
+
+.status-msg.error{
+    background:#ffe5e5;
+    color:#c62828;
+}
+
+.status-msg.info{
+    background:#eef5ff;
+    color:#0d47a1;
+}
+
+.hidden{
+    display:none;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:20px;
+}
+
+.panel-card{
+    padding:20px;
+}
+
+.panel-header-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.panel-card h3{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.panel-content{
+    max-height:260px;
+    overflow-y:auto;
+}
+
+.data-list{
+    list-style:none;
+}
+
+.data-list li{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    transition:.3s;
+}
+
+.data-list li:hover{
+    background:#f8fbff;
+}
+
+.fav-item-btn{
+    width:100%;
+    background:none;
+    border:none;
+    text-align:left;
+    color:var(--primary);
+    cursor:pointer;
+    font-weight:600;
+}
+
+.delete-btn{
+    background:none;
+    border:none;
+    color:#dc3545;
+    cursor:pointer;
+}
+
+.empty-msg{
+    text-align:center;
+    color:#999;
+    font-style:italic;
+}
+
+.text-link-btn{
+    border:none;
+    background:none;
+    color:#dc3545;
+    cursor:pointer;
+}
+
+.text-link-btn:hover{
+    text-decoration:underline;
+}
+
+.text-gold{
+    color:#ffc107;
+}
+
+.text-blue{
+    color:var(--primary);
+}
+
+/* ================= FOOTER ================= */
+
+.app-footer{
+    background:#1d2125;
+    color:#c2c8d0;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+/* ================= TABLETS ================= */
+
+@media (max-width:768px){
+
+    .app-container{
+        padding:15px;
+    }
+
+    .currency-row{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .icon-btn{
+        margin:0 auto;
+        transform:rotate(90deg);
+    }
+
+    .icon-btn:hover{
+        transform:rotate(270deg);
+    }
+
+    .result-actions{
+        flex-direction:column;
+    }
+
+    .secondary-btn{
+        width:100%;
+    }
+
+}
+
+/* ================= PHONES ================= */
+
+@media (max-width:480px){
+
+    .institution-details h1{
+        font-size:1.1rem;
+    }
+
+    .institution-details h2{
+        font-size:.9rem;
+    }
+
+    .institution-details h3{
+        font-size:.9rem;
+    }
+
+    .card-header h2{
+        font-size:1.3rem;
+    }
+
+    .result-value{
+        font-size:1.6rem;
+    }
+
+    .card-body{
+        padding:18px;
+    }
+
+    .logo-placeholder{
+        width:65px;
+        height:65px;
+    }
+
+}

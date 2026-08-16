@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 6 - Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="inst-header">
+        <div class="header-container">
+            <div class="logo-placeholder">
+                <img src="logo.png" alt="School Logo" onerror="this.style.display='none';">
+                <div class="logo-text-fallback"><i class="fa-solid fa-graduation-cap"></i></div>
+            </div>
+            <div class="institution-details">
+                <h1>DEPARTMENT SOFTWARE ENGINEERING </h1>
+                <h2>FACULTY OF SICT</h2>
+                <h3>PROJECT BY: GROUP 6</h3>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-container">
+        <div class="converter-card">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-calculator"></i> Real-Time Currency Converter</h2>
+                <p>Convert over 30+ major international currencies with live exchange rates</p>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="amount">Enter Amount</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
+                        <input type="number" id="amount" value="100" min="0" placeholder="0.00">
+                    </div>
+                </div>
+
+                <div class="currency-row">
+                    <div class="form-group flex-1">
+                        <label for="from-currency">From</label>
+                        <select id="from-currency">
+                            </select>
+                    </div>
+
+                    <button id="swap-btn" class="icon-btn" title="Swap Currencies">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </button>
+
+                    <div class="form-group flex-1">
+                        <label for="to-currency">To</label>
+                        <select id="to-currency">
+                            </select>
+                    </div>
+                </div>
+
+                <button id="convert-btn" class="primary-btn">
+                    <i class="fa-solid fa-rotate"></i> Convert Currency
+                </button>
+
+                <div id="status-message" class="status-msg hidden"></div>
+
+                <div class="result-box">
+                    <div class="result-header">Converted Result</div>
+                    <div id="result-display" class="result-value">---</div>
+                    <div id="rate-display" class="rate-value">Enter an amount and click convert</div>
+                    <div class="result-actions">
+                        <button id="copy-btn" class="secondary-btn btn-sm">
+                            <i class="fa-regular fa-copy"></i> Copy Result
+                        </button>
+                        <button id="fav-btn" class="secondary-btn btn-sm">
+                            <i class="fa-regular fa-star"></i> Save Pair
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="panel-card">
+                <h3><i class="fa-solid fa-star text-gold"></i> Favourite Pairs</h3>
+                <div class="panel-content">
+                    <ul id="favorites-list" class="data-list">
+                        <li class="empty-msg">No favorite pairs saved yet.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel-card">
+                <div class="panel-header-row">
+                    <h3><i class="fa-solid fa-history text-blue"></i> Conversion History</h3>
+                    <button id="clear-history-btn" class="text-link-btn">Clear</button>
+                </div>
+                <div class="panel-content">
+                    <ul id="history-list" class="data-list">
+                        <li class="empty-msg">Your recent conversions will appear here.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 Group 6 Projects. Developed as an SDLC Capstone Web Application. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
